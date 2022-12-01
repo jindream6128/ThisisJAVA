@@ -6,7 +6,7 @@ public class CharExample {
 		char c1 = 'A';
 		char c2 = 65;
 		
-		char c3 = '°¡';
+		char c3 = 'ê°€';
 		char c4 = 44032;
 		
 		System.out.println(c1);
