@@ -10,6 +10,7 @@ public class CalculatorExample {
 		System.out.println(result1);
 		System.out.println(result2);
 		System.out.println(result3);
+		System.out.println(result2);
 	}
 
 }
