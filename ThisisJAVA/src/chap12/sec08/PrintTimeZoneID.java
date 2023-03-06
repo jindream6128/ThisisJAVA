@@ -8,6 +8,7 @@ public class PrintTimeZoneID {
 		String[] availableIDs = TimeZone.getAvailableIDs();
 		for(String str : availableIDs) {
 			System.out.println(str);
+			System.out.println(str);
 		}
 	}
 
