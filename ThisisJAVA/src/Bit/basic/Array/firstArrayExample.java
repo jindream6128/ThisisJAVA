@@ -3,7 +3,7 @@ package Bit.basic.Array;
 import java.util.Arrays;
 import java.util.Scanner;
 
-public class ArrayExample {
+public class firstArrayExample {
 
 	int[] m = new int[10];// [0][0][0][0][0]
 
@@ -96,7 +96,7 @@ public class ArrayExample {
 
 	public static void main(String[] args) {
 
-		ArrayExample a = new ArrayExample();
+		firstArrayExample a = new firstArrayExample();
 		Scanner sc = new Scanner(System.in);
 
 		while (true) {

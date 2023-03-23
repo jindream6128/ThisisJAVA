@@ -3,7 +3,7 @@ package Bit.basic.Array;
 import java.util.Scanner;
 /* 근데 가장 많이 나온수가 여러개일때도 , 가장 많이 나온수가 0 일때도 예외처리를 해야함 */
 //최댓값ㅇ, 최소값ㅇ, 근사값ㅇ, 편차ㅇ, 최빈값ㅇ, 합계ㅇ, 평균ㅇ, 개수?, 평균이상 개수ㅇ, 평균 이하 개수ㅇ
-public class ArrayEx5 {
+public class manyExampleCase {
 
     private int[] m = new int[10];
     StringBuilder sb = new StringBuilder(); //근삿 값 ( 찾는 값이 10 이고 8 과 12 일때 둘다 들어감)
@@ -13,7 +13,7 @@ public class ArrayEx5 {
     StringBuilder sb4 = new StringBuilder();
 
     // 배열에 Random 값 넣기
-    public ArrayEx5() {
+    public manyExampleCase() {
 //        for (int i = 0; i < m.length; i++) {
 //            m[i] = (int) (Math.random() * 100)+1; //1부터 100까지의 난수 발생
 //            //0부터 100까지 난수일때 두개씩 나오는거 난수처리 해야함
@@ -198,7 +198,8 @@ public class ArrayEx5 {
     }
 
     public static void main(String[] args) {
-        ArrayEx5 a = new ArrayEx5();
+        manyExampleCase a = new manyExampleCase();
+        System.out.println("search할 숫자를 입력해주세요");
         Scanner sc = new Scanner(System.in);
         int k = sc.nextInt();
 
