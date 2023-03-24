@@ -20,15 +20,15 @@ public class Student {
 		return hashCode;
 	}
 	
-	@Override
-	public boolean equals(Object obj) {
-		if(obj instanceof Student target) {//Student의 객체인지 확인하고 맞으면 target르 형변환
-			if(no == target.no && name.equals(target.getName())) {
-				//번호와 이름이 둘다 같으면 true
-				return true;
-			}
-		}
-		return false;
-	}
+//	@Override
+//	public boolean equals(Object obj) {
+//		if(obj instanceof Student target) {//Student의 객체인지 확인하고 맞으면 target르 형변환
+//			if(no == target.no && name.equals(target.getName())) {
+//				//번호와 이름이 둘다 같으면 true
+//				return true;
+//			}
+//		}
+//		return false;
+//	}
 	
 }

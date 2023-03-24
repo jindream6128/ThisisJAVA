@@ -1,11 +1,8 @@
 package Bit.basic.Day5;
 
 public class SuperClass extends Object{
+	private int superCalssValue;
 	public void actionProcess() {
-		System.out.println("actionProces");
-		System.out.println("actionProces");
-		System.out.println("actionProces");
-		System.out.println("actionProces");
 		System.out.println("actionProces");
 	}
 	

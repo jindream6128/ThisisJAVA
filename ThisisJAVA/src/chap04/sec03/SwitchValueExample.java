@@ -23,18 +23,18 @@ public class SwitchValueExample {
 			score = 50;
 		}
 		System.out.println(score);
-		//JAVA 12 부터
-		int score2 = switch(grade) {
-		case "A" -> 100;
-		case "B" -> {
-			//여기 연산식
-			int result = 100 - 20;
-			yield result;
-		}
-		default -> 50;
-		};
+//		//JAVA 12 부터
+//		int score2 = switch(grade) {
+//		case "A" -> 100;
+//		case "B" -> {
+//			//여기 연산식
+//			int result = 100 - 20;
+//			yield result;
+//		}
+//		default -> 50;
+//		};
 		
-		System.out.println(score2);
+//		System.out.println(score2);
 	}
 
 }

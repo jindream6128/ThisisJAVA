@@ -29,5 +29,19 @@ public class SuperMain {
 //		SuperClass su = new SuperClass();
 //		su.actionProcess();
 		
+//		SubClass1 s1 = new SubClass1(); 
+//		System.out.println(s1.toString());
+		
+		String str1 = "abc";
+		String str2 = "abc";
+		
+		System.out.println(str1==str2);
+		
+		String str3 = new String("def");
+		String str4 = new String("def");
+		
+		System.out.println(str3.hashCode() == str4.hashCode());
+		System.out.println(str3.hashCode());
+		System.out.println(str4.hashCode());
 	}
 }

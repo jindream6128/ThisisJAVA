@@ -7,15 +7,15 @@ public class Member {
 		this.id = id;
 	}
 
-	@Override
-	public boolean equals(Object obj) {
-		if (obj instanceof Member m) {
-			if (id.equals(m.id)) {
-				return true;
-			}
-		}
-
-		return false;
-
-	}
+//	@Override
+//	public boolean equals(Object obj) {
+//		if (obj instanceof Member m) {
+//			if (id.equals(m.id)) {
+//				return true;
+//			}
+//		}
+//
+//		return false;
+//
+//	}
 }

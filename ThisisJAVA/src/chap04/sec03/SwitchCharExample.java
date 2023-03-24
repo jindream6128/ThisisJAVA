@@ -23,25 +23,25 @@ public class SwitchCharExample {
 			System.out.println("손님 입니다.");
 		}
 
-		// JAVA12
-		switch (grade) {
-		case "A", "a" -> {
-			System.out.println("우수 회원 입니다.");
-		}
-		case "B", "b" -> {
-			System.out.println("일반 회원 입니다.");
-		}
-		default -> {
-			System.out.println("손님 입니다.");
-		}
-		}
-		
-		//한줄일때는 중괄호 생략 가능
-		switch(grade) {
-		case "A", "a" -> System.out.println("우수 회원 입니다.");
-		case "B", "b" -> System.out.println("일반 회원 입니다.");
-		default -> System.out.println("손님 입니다.");
-		}
+//		// JAVA12
+//		switch (grade) {
+//		case "A", "a" -> {
+//			System.out.println("우수 회원 입니다.");
+//		}
+//		case "B", "b" -> {
+//			System.out.println("일반 회원 입니다.");
+//		}
+//		default -> {
+//			System.out.println("손님 입니다.");
+//		}
+//		}
+//		
+//		//한줄일때는 중괄호 생략 가능
+//		switch(grade) {
+//		case "A", "a" -> System.out.println("우수 회원 입니다.");
+//		case "B", "b" -> System.out.println("일반 회원 입니다.");
+//		default -> System.out.println("손님 입니다.");
+//		}
 		
 		
 		}
