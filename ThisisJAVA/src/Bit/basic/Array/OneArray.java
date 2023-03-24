@@ -1,32 +1,31 @@
 package Bit.basic.Array;
 
 import java.util.Scanner;
-/* 근데 가장 많이 나온수가 여러개일때도 , 가장 많이 나온수가 0 일때도 예외처리를 해야함 */
-//최댓값ㅇ, 최소값ㅇ, 근사값ㅇ, 편차ㅇ, 최빈값ㅇ, 합계ㅇ, 평균ㅇ, 개수?, 평균이상 개수ㅇ, 평균 이하 개수ㅇ
-public class manyExampleCase {
 
-    private int[] m = new int[10];
+//최댓값ㅇ, 최소값ㅇ, 근사값ㅇ, 편차ㅇ, 최빈값ㅇ, 합계ㅇ, 평균ㅇ, 평균이상 개수ㅇ, 평균 이하 개수ㅇ
+public class OneArray {
+
+    private int[] m = new int[10]; //난수들이 저장되는 값
     StringBuilder sb = new StringBuilder(); //근삿 값 ( 찾는 값이 10 이고 8 과 12 일때 둘다 들어감)
     StringBuilder sb1 = new StringBuilder(); //편차 저장
-    StringBuilder sb2 = new StringBuilder();
-    StringBuilder sb3 = new StringBuilder();
-    StringBuilder sb4 = new StringBuilder();
+
 
     // 배열에 Random 값 넣기
-    public manyExampleCase() {
-//        for (int i = 0; i < m.length; i++) {
-//            m[i] = (int) (Math.random() * 100)+1; //1부터 100까지의 난수 발생
-//            //0부터 100까지 난수일때 두개씩 나오는거 난수처리 해야함
-//        }
-    		m= new int[]{0,0,0,0,1,2,3,4,5,6};
+    public OneArray() {
+        for (int i = 0; i < m.length; i++) {
+            m[i] = (int) (Math.random() * 100)+1; //1부터 100까지의 난수 발생
+        }
+//    		m= new int[]{0,0,0,0,1,2,3,4,5,6};
     }
 
     // 출력하기
     public void print(int k) {
+    	
         for (int i = 0; i < m.length; i++) {
             System.out.print(m[i] + " ");
         }
         System.out.println();
+        
         System.out.println("최댓값: " + maxValue(1));
         System.out.println("최솟값: " + minValue(1));
         System.out.println("총합: " + totalSum());
@@ -34,6 +33,7 @@ public class manyExampleCase {
         System.out.println("평균 이상의 갯수: " + maxavgCnt());
         System.out.println("평균 미만의 갯수: " + minavgCnt());
         //오름차순으로 정렬되어있는 상태
+        
         System.out.println();
         System.out.println(k + " 와 가장 작은 차는? " + approximate(k));
         System.out.println(k + " 의  근삿값은? " + sb);
@@ -49,6 +49,7 @@ public class manyExampleCase {
         for(int num : m){
             System.out.print(num + " ");
         }
+        
         System.out.println();
         deviation();
         System.out.println("현재 배열에서의 편차는?: "+ sb1);
@@ -117,11 +118,8 @@ public class manyExampleCase {
         int k = totalAvg();
         int cnt = 0;
         for (int i = 0; i < m.length; i++) {
-            if (k <= m[i]) {
-                cnt++;
-            }
+            if (k <= m[i]) cnt++;
         }
-
         return cnt;
     }
 
@@ -140,20 +138,16 @@ public class manyExampleCase {
     // 근삿값 만 구하기 
     
     // ans은 가장 작은 차, 근삿값 그자체는 sb에 들어가 있다
-    
     public int approximate(int n) {
         int ans = Math.abs(n - m[0]);
 
         for (int i = 1; i < m.length; i++) {
-            if (ans > Math.abs(n - m[i])) {
-                ans = Math.abs(n - m[i]);
-            }
+            if (ans > Math.abs(n - m[i])) ans = Math.abs(n - m[i]);
         }
+        
         //근삿값 들을 sb에 넣기
         for (int i = 0; i < m.length; i++) {
-            if (Math.abs(n - m[i]) == ans) {
-                sb.append(m[i]).append(" ");
-            }
+            if (Math.abs(n - m[i]) == ans) sb.append(m[i]).append(" ");
         }
 
         return ans;
@@ -166,9 +160,8 @@ public class manyExampleCase {
         int[] valueCnt = new int[101]; //난수는 0부터 100까지니까 0부터 100까지의 인덱스 만들기
 
         //valueCnt 는 그냥 index - > 해당 값이 몇번 들어가있는지 빈도수구하기
-        for (int i = 0; i < m.length; i++) {
-            valueCnt[m[i]]++; //10개 돌면서 안에 있는값 ++해주기
-        }
+        for (int i = 0; i < m.length; i++) valueCnt[m[i]]++; //10개 돌면서 안에 있는값 ++해주기
+
 
         int max = 0; //빈 도 수 중에서 제일 많이 들어간 "값"
         int tmp = 0; // 그 값의 "빈도 수"
@@ -198,8 +191,8 @@ public class manyExampleCase {
     }
 
     public static void main(String[] args) {
-        manyExampleCase a = new manyExampleCase();
-        System.out.println("search할 숫자를 입력해주세요");
+        OneArray a = new OneArray();
+        System.out.println("기준할 숫자를 입력해주세요");
         Scanner sc = new Scanner(System.in);
         int k = sc.nextInt();
 

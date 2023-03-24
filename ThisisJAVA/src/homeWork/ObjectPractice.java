@@ -15,25 +15,18 @@ public class ObjectPractice {
 	int k = member.length;
 	// 이름 객체
 	String[] name = new String[k];
-
 	// 주민번호 객체
 	String[] ssn = new String[k];
-
 	// 나이 객체
 	int[] age = new int[k];
-
 	// 전화번호 객체
 	String[] pn = new String[k];
-
 	// 생일여부
 	String[] BrithdayChk = new String[k];
-
 	// 성별
 	String[] gender = new String[k];
-
 	// 띠
 	String[] Ddians = new String[k];
-
 	// 그사람이 사는 지역
 	String[] stayLocal = new String[k];
 
@@ -62,7 +55,6 @@ public class ObjectPractice {
 			int tmp1 = Integer.parseInt(tmp.substring(0, 2));
 			age[i] = year - (tmp1 + 1900) + 1;
 		}
-
 	}
 
 	// 오늘 생일인지
@@ -84,9 +76,7 @@ public class ObjectPractice {
 			} else {
 				BrithdayChk[i] = name[i] + ": 오늘은 생일이 아닙니다! ";
 			}
-
 		}
-
 	}
 
 	// 성별
@@ -114,7 +104,6 @@ public class ObjectPractice {
 			String tmp = pn[i];
 			int l = tmp.indexOf(')');
 			String s = tmp.substring(0, l);
-
 			// 정수로 받으면 051 ->51
 			if (s.equals("051")) {
 				stayLocal[i] = name[i] + ": 부산";
@@ -195,9 +184,9 @@ public class ObjectPractice {
 		}
 		System.out.println();
 		System.out.println();
-
-		ageCalc();
+	
 		// 나이를 출력
+		ageCalc();
 		System.out.println("<나이>");
 		for (int i : age) {
 			System.out.print(i + " ");
@@ -213,9 +202,9 @@ public class ObjectPractice {
 		}
 		System.out.println();
 		System.out.println();
-
-		gender();
+	
 		// 성별 출력
+		gender();
 		System.out.println("<성별>");
 		for (String s : gender) {
 			System.out.print(s + " ");
@@ -223,9 +212,11 @@ public class ObjectPractice {
 		System.out.println();
 		System.out.println();
 
+		// 나이평균
 		System.out.println("나이의 평균은(버림): " + avgAge());
 		System.out.println();
 
+		// 나이 오름차순 정렬
 		sortAge();
 		System.out.println("<나이의 오름차순 정렬>");
 		for (int i : sortAge()) {
@@ -233,6 +224,7 @@ public class ObjectPractice {
 		}
 		System.out.println();
 
+		//띠 출력
 		ansDdi();
 		System.out.println();
 		System.out.println("<개개인의 띠>");
